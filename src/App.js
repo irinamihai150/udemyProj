@@ -1,12 +1,12 @@
 import React from "react"
-import UserList from "./components/UserList"
-import Card from "./components/Card"
+// import UserList from "./components/UserList"
+// import Card from "./components/Card"
+import AddUser from "./components/AddUser"
 
 function App() {
 	return (
 		<div>
-			<Card/>
-			<UserList />
+		<AddUser/>
 		</div>
 	)
 }

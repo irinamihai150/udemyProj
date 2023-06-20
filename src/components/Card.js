@@ -1,13 +1,10 @@
 import React from "react"
-import AddUser from "./AddUser"
-import Button from "./Button"
+// import Button from "./Button"
+import classes from "./Card.module.css"
 
-const Card = () => {
+const Card = (props) => {
 	return (
-		<div>
-			<AddUser />
-			<Button />
-		</div>
+		<div className={`${classes.card} ${props.className}`}>{props.children}</div>
 	)
 }
 
