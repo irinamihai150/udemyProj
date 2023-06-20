@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react"
+import AddUser from "./AddUser"
+import Button from "./Button"
 
 const Card = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+	return (
+		<div>
+			<AddUser />
+			<Button />
+		</div>
+	)
 }
 
 export default Card

@@ -1,13 +1,11 @@
 import React from "react"
-import AddUser from "./components/AddUser"
-import Button from "./components/Button"
 import UserList from "./components/UserList"
+import Card from "./components/Card"
 
 function App() {
 	return (
 		<div>
-			<AddUser />
-			<Button />
+			<Card/>
 			<UserList />
 		</div>
 	)
