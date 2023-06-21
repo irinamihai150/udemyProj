@@ -8,9 +8,13 @@ const AddUser = (props) => {
 	const [enteredAge, setEnteredAge] = useState("")
 	const addUserHandler = (event) => {
 		event.preventDefault()
-		// setEnteredUsername(enteredUsername)
-		// setEnteredAge(enteredAge)
-		console.log(enteredUsername, enteredAge)
+		if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+			return
+		}
+		if (+enteredAge < 1) {
+			return
+		}
+		props.onAddUser(enteredUsername, enteredAge)
 		setEnteredUsername("")
 		setEnteredAge("")
 	}
@@ -36,7 +40,7 @@ const AddUser = (props) => {
 					className={classes.input}
 					id='age'
 					type='number'
-          value={enteredAge}
+					value={enteredAge}
 					onChange={handleAge}
 				/>
 				<Button type='submit'>Add User</Button>
